@@ -1,5 +1,5 @@
 #BASE IMAGE
-FROM debian:jessie
+FROM i386/ubuntu
 
 #INSTALL REQUIRED LIBRARIES
 ENV DEBIAN_FRONTEND noninteractive
