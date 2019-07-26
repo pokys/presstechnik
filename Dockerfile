@@ -1,11 +1,10 @@
 #BASE IMAGE
-FROM i386/ubuntu
+FROM i386/alpine
 
 #INSTALL REQUIRED LIBRARIES
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y libunwind8 libglib2.0 \
-              && apt-get clean \
-              && rm -rf /var/lib/lists/*
+RUN apk add --no-cache libunwind8 libglib2.0
+
 
 #ADD APPLICATION TO DOCKER IMAGE
 
